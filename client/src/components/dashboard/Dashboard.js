@@ -45,7 +45,7 @@ class Dashboard extends React.Component {
       account: decoded.pubkey
     })
       
-    if (this.state.account === '0x3A234223d328aA95b8811FF16Fe5447A3FAd0951') {
+    if (this.state.account === '0x3a234223d328aa95b8811ff16fe5447a3fad0951') {
       this.setState({
       isAdmin: true
       })
