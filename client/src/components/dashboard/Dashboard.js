@@ -15,6 +15,7 @@ class Dashboard extends React.Component {
       candidates: [],
       hasVoted: false,
       loading: true,
+      isAdmin: false,
       voting: false,
       contractadd:'0x5D11d56F5ECd1359DC3306758B3f8b68045A562D'
     }
@@ -44,6 +45,12 @@ class Dashboard extends React.Component {
       account: decoded.pubkey
     })
       
+    if (this.state.account == '0x3A234223d328aA95b8811FF16Fe5447A3FAd0951') {
+      this.setState({
+      isAdmin: true
+      })
+    }
+    
       this.election.deployed().then((electionInstance) => {
         this.electionInstance = electionInstance
         this.watchEvents()
