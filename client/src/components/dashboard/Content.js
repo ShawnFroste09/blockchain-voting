@@ -8,7 +8,7 @@ class Content extends React.Component {
     return (
       <div>
         
-        { this.props.hasVoted ?
+        { this.props.isAdmin ?       
           <TestChart candidates={this.props.candidates}  />
           // :null
           : <ListCandidates candidates={this.props.candidates}  />
